@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audio</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="shortcut icon" href="../../Icono.svg" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <button class="parent-control">Control Parental</button>
+    <button class="profile-btn"><img src="../src/img/" alt=""></button>
+  </header>
+
+    <aside class="sidebar">
+      <button class="icon-button icon-inicio"><img src="../src/img/Inicio.svg" alt="Inicio" /></button>
+      <button class="icon-button icon-game"><img src="../src/img/Game.svg" alt=""></button>
+      <button class="icon-button icon-media"><img src="../src/img/MultMedia.svg" alt=""></button>
+    </aside>
+
+  <main class="main-content reproductor-audio">
+    <div class="media-box">
+      <div class="image-placeholder"></div>
+      <h2 class="titulo">Título del Audio</h2>
+
+      <audio id="audio" src="../src/audio/Los Cadejos.mp3"></audio>
+
+      <div class="controls audio-controls">
+        <button id="retroceder" class="control-btn">⏪</button>
+        <button id="playPause" class="control-btn">▶️</button>
+        <button id="avanzar" class="control-btn">⏩</button>
+      </div>
+
+      <div class="progress-bar" id="barra">
+        <div class="progress" id="progreso"></div>
+      </div>
+
+      <div class="action-buttons">
+        <button>Ver</button>
+        <button>Leer</button>
+        <button>Escuchar</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

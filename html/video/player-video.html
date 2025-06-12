@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../../Icono.svg" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+      <button class="parent-control">Control Parental</button>
+      <button class="profile-btn"><img src="../../src/img/Perfil.svg" alt=""></button>
+  </header>
+
+    <aside class="sidebar">
+      <button class="icon-button icon-inicio"><img src="../src/img/Inicio.svg" alt="Inicio" /></button>
+      <button class="icon-button icon-game"><img src="../src/img/Game.svg" alt=""></button>
+      <button class="icon-button icon-media"><img src="../src/img/MultMedia.svg" alt=""></button>
+    </aside>
+
+    <main class="reproductor-video">
+      <video id="video" src="../src/video/Los Cadejos.mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+
+      <div class="video-controls">
+        <button id="retro" class="control-btn">⏪</button>
+        <button id="play" class="control-btn">▶️</button>
+        <button id="avan" class="control-btn">⏩</button>
+        <button id="full" class="control-btn">⛶</button>
+      </div>
+
+      <div class="video-progress">
+        <span id="tiempoActual">00:00</span>
+        <input type="range" id="progreso" min="0" value="0">
+        <span id="duracionTotal">00:00</span>
+      </div>
+
+      <div class="action-buttons">
+        <a class="btn btn_video">Ver</a>
+        <a class="btn btn_lectura">Leer</a>
+        <a class="btn btn_audio">Escuchar</a>
+      </div>
+    </main>
+
+        <!-- <aside class="navbar_aside">
+            <a class="btn btn-circular btn-inicio">Inicio</a>
+            <a class="btn btn-circular btn-juegos">Juegos</a>
+            <a class="btn btn-circular btn-media">Media</a>
+        </aside>
+        <section class="section_video">
+            <h1 class="heading_titulo">Paquito te cuenta</h1>
+            <p class="heading_descipcion">Un lugar para que los más pequeños aprendan y se diviertan</p>
+
+            <div class="video_container">
+                <video controls>
+                    <source class="video" src="../src/video/Los Cadejos.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+
+              <div class="controls video-controls">
+                <button id="retroceder" class="control-btn">⏪</button>
+                <button id="playPause" class="control-btn">⏯️</button>
+                <button id="avanzar" class="control-btn">⏩</button>
+                <button id="muteToggle" class="control-btn">🔊</button>
+                <button id="fullscreen" class="control-btn">⛶</button>
+              </div>
+
+            <div class="buttons">
+                <button class="btn btn_video">Ver</button>
+                <button class="btn btn_lectura">Leer</button>
+                <button class="btn btn_audio">Escuchar</button>
+            </div>
+        </section> -->
+    </main>
+  <script src="../scripts.js"></script>
+</body>
+</html>
