@@ -40,3 +40,11 @@ retroceder.addEventListener('click', () => {
 avanzar.addEventListener('click', () => {
     audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
 });
+
+let ver = document.getElementsByClassName('btn_video');
+let leer = document.getElementsByClassName('btn_lectura');
+let escuchar = document.getElementsByClassName('btn_audio');
+
+ver.addEventListener('click', () => {
+    
+});
