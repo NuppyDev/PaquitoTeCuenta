@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paquito te Cuenta - Para Personas Adultas</title>
+  <title>Control Parental</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="shortcut icon" href="Icono.svg" type="image/x-icon" />
   <style>
     * {
       box-sizing: border-box;
@@ -13,126 +16,146 @@
     }
     body {
       font-family: 'Quicksand', sans-serif;
-      background-color: #f2fbf7;
       color: #333;
-      line-height: 1.7;
+      background-color: #f2fdf9;
+      line-height: 1.6;
     }
-    header {
-      background-color: #158466;
-      padding: 2rem;
+    .heading {
+      background: linear-gradient(to right, #72d9b0, #4dbd8f);
       color: white;
+      padding: 2rem 1rem;
       text-align: center;
     }
-    header h1 {
+    .heading h1 {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
+    .heading p {
+      font-size: 1.2rem;
     }
     .section {
-      margin-bottom: 3rem;
+      position: relative;
+      padding: 4rem 2rem;
+      overflow: hidden;
+      z-index: 1;
     }
-    .section h2 {
+    .section-about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../src/img/About1.png');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px) brightness(0.9);
+      z-index: -1;
+    }
+    .section-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
       color: #158466;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .section p {
-      font-size: 1.15rem;
+    p {
+      font-size: 1.1rem;
       margin-bottom: 1rem;
     }
     .resources {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1.5rem;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      justify-content: center;
     }
-    .resource-box {
-      flex: 1 1 280px;
-      background-color: white;
+    .resource-card {
+      background: #ffffff;
       border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
     }
-    .resource-box h3 {
+    .resource-card:hover {
+      transform: translateY(-5px);
+      background-color: #f9f9f9;
+    }
+    .resource-card i {
+      font-size: 2rem;
       margin-bottom: 0.5rem;
-      font-size: 1.3rem;
-      color: #144c3c;
+      color: #f9a826;
     }
-    .resource-box p {
-      font-size: 1rem;
-      color: #555;
+    .resource-card a {
+      text-decoration: none;
+      color: #158466;
+      font-weight: 600;
     }
     footer {
-      background-color: #144c3c;
+      background-color: #158466;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 1rem;
+      margin-top: 3rem;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #f9a826;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a.button:hover {
-      background-color: #d98f1f;
+    footer p {
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Para Personas Adultas</h1>
-    <p>Información para madres, padres, tutores y educadores sobre el uso de Paquito te Cuenta</p>
-  </header>
-
-  <div class="container">
-    <section class="section">
-      <h2>¿Qué es Paquito te Cuenta?</h2>
-      <p>Paquito te Cuenta es una aplicación educativa diseñada especialmente para niñas y niños nicaragüenses, con el objetivo de preservar la cultura mediante cuentos interactivos, juegos y actividades audiovisuales.</p>
-    </section>
-
-    <section class="section">
-      <h2>¿Por qué es importante?</h2>
-      <p>Hoy más que nunca, es esencial mantener vivas nuestras tradiciones y leyendas. La app ayuda a que los más pequeños se conecten con su identidad de forma segura, atractiva y entretenida.</p>
-    </section>
-
-    <section class="section">
-      <h2>Cómo pueden ayudar las personas adultas</h2>
-      <p>La participación activa de madres, padres y educadores refuerza el aprendizaje y el interés por la cultura. Invitamos a acompañar a los niños en las actividades de Paquito y conversar con ellos sobre lo aprendido.</p>
-    </section>
-
-    <section class="section">
-      <h2>Recursos y Apoyo</h2>
-      <div class="resources">
-        <div class="resource-box">
-          <h3>Guía para Padres</h3>
-          <p>Consejos para acompañar el uso de la app de forma positiva y educativa.</p>
-          <a href="#" class="button">Descargar PDF</a>
-        </div>
-        <div class="resource-box">
-          <h3>Actividades en Casa</h3>
-          <p>Ideas para reforzar lo aprendido mediante juegos fuera de pantalla.</p>
-          <a href="#" class="button">Ver actividades</a>
-        </div>
-        <div class="resource-box">
-          <h3>Contacto con el Equipo</h3>
-          <p>¿Tenés sugerencias o preguntas? Escribinos y con gusto te atenderemos.</p>
-          <a href="mailto:contacto@paquitotecuenta.com" class="button">Escribir</a>
-        </div>
-      </div>
-    </section>
+    <header class="header">
+      <button class="parent-control"><a class="button-a" href="#">Control Parental</a></button>
+      <button class="profile-btn"><a class="button-a" href="perfil.html"><img src="../../src/img/Perfil.svg" alt=""></a></button>
+    </header>
+  <div class="heading">
+    <h1>Para Pradres de Familia</h1>
+    <p>Descubre cómo Paquito te Cuenta promueve la cultura nicaragüense entre las nuevas generaciones.</p>
   </div>
 
+  <section class="section-about section">
+    <div class="section-content">
+      <h2>¿Qué es Paquito te Cuenta?</h2>
+      <p>Es una plataforma interactiva que utiliza cuentos, juegos y videos para enseñar a niños y niñas sobre la cultura nicaragüense de manera entretenida y educativa.</p>
+      <p>Basada en la teoría del aprendizaje multimedia, la app integra elementos visuales, auditivos y de gamificación para fomentar una conexión emocional con las raíces culturales del país.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-content">
+      <h2>Recursos para Madres, Padres y Docentes</h2>
+      <div class="resources">
+        <div class="resource-card">
+          <i class="fas fa-file-pdf"></i>
+          <p><a href="#">Guía para Docentes</a></p>
+        </div>
+        <div class="resource-card">
+          <i class="fas fa-child"></i>
+          <p><a href="#">Recomendaciones de uso con niños</a></p>
+        </div>
+        <div class="resource-card">
+          <i class="fas fa-users"></i>
+          <p><a href="#">Cómo apoyar desde casa</a></p>
+        </div>
+        <div class="resource-card">
+          <i class="fas fa-question-circle"></i>
+          <p><a href="#">Preguntas Frecuentes</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Paquito te Cuenta. Todos los derechos reservados. | Universidad Nacional de Ingeniería</p>
+    <p>Paquito te Cuenta &copy; 2025. Desarrollado por estudiantes de la UNI. Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>

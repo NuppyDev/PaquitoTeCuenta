@@ -1,39 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia</title>
+  <meta charset="UTF-8">
+  <title>Leyendo con Paquito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="shortcut icon" href="../../Icono.svg" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #bb73f1;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .history {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 75px;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .media-frame {
+      width: 500px;
+      height: 300px;
+      background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+                        linear-gradient(-45deg, #ccc 25%, transparent 25%),
+                        linear-gradient(45deg, transparent 75%, #ccc 75%),
+                        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+      background-size: 40px 40px;
+      background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .arrow-left, .arrow-right {
+      background-color: #00CF7F;
+      color: white;
+      border-radius: 8px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 1.5px 3px 0px #B0F0D7;
+      cursor: pointer;
+    }
+
+    .arrow{
+      width: 25px;
+      height: 25px;
+    }
+
+    .description {
+      max-width: 600px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .arrow-left:hover, .arrow-right:hover {
+      background-color: #1aa06d;
+      box-shadow: 0px 0px 0px #B0F0D7;
+    }
+  </style>
 </head>
 <body>
-    <header>
+
   <header class="header">
-      <button class="parent-control">Control Parental</button>
-      <button class="profile-btn"><img src="../../src/img/Perfil.svg" alt=""></button>
+      <button class="parent-control"><a class="button-a" href="../controlParent.html">Control Parental</a></button>
+      <button class="profile-btn"><a class="button-a" href="../perfil.html"><img src="../../src/img/Perfil.svg" alt=""></a></button>
   </header>
 
-    <main>
-        <aside class="navbar_aside">
-            <a class="btn btn-circular btn-inicio">Inicio</a>
-            <a class="btn btn-circular btn-juegos">Juegos</a>
-            <a class="btn btn-circular btn-media">Media</a>
-        </aside>
-        <section class="video">
-            <h1 class="heading_titulo">Paquito te cuenta</h1>
-            <p class="heading_descipcion">Un lugar para que los más pequeños aprendan y se diviertan</p>
+  <div class="container">
+    <aside class="sidebar">
+      <button class="icon-button icon-inicio">
+        <a class="button-a" href="../../index.html">
+          <img src="../../src/img/Inicio.svg" alt="Inicio" />
+        </a>
+      </button>
+      <button class="icon-button icon-game">
+        <a class="button-a" href="../game/games.html">
+          <img src="../../src/img/Game.svg" alt="">
+        </a></button>
+      <button class="icon-button icon-media">
+        <a class="button-a" href="../video/videos.html">
+          <img src="../../src/img/MultMedia.svg" alt="">
+        </a></button>
+    </aside>
 
-            <div class="video_container">
-                <video controls>
-                    <source src="../src/video/" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-            <div class="buttons">
-                <a class="btn btn_video">Ver</a>
-                <a class="btn btn_lectura">Leer</a>
-                <a class="btn btn_audio">Escuchar</a>
-            </div>
-        </section>
+    <main class="main-content">
+      <h1>Titulo</h1>
+      <div class="history">
+        <div class="arrow-left"><img class="arrow" src="../../src/img/Anterior.svg" alt=""></div>
+        <div class="media-frame"></div>
+        <div class="arrow-right"><img class="arrow" src="../../src/img/Siguiente.svg" alt=""></i></div>
+      </div>
+      <p class="description">Lorem ipsum dolor sit amet consectetur. Commodo venenatis lobortis at ut dolor ultrices aliquam in. In blandit placerat ac facilisis et.</p>
+        
+      <div class="actions">
+        <button class="action-btn"><img src="../../src/img/View.svg" alt="" class="action"><span>Ver</span></button>
+        <button class="action-btn"><img src="../../src/img/Read.svg" alt="" class="action"><span>Leer</span></button>
+        <button class="action-btn"><img src="../../src/img/Escuchar.svg" alt="" class="action"><span>Escuchar</span></button>
+      </div>
     </main>
+  </div>
+
 </body>
 </html>

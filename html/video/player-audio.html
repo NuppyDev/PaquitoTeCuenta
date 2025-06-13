@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audio</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <title>Escuchando con Paquito</title>
+  <link rel="stylesheet" href="../../styles.css"/>
   <link rel="shortcut icon" href="../../Icono.svg" type="image/x-icon" />
 </head>
 <body>
   <header class="header">
-    <button class="parent-control">Control Parental</button>
-    <button class="profile-btn"><img src="../src/img/" alt=""></button>
+      <button class="parent-control"><a class="button-a" href="../../html/controlParent.html">Control Parental</a></button>
+      <button class="profile-btn"><a class="button-a" href="../perfil.html"><img src="../../src/img/Perfil.svg" alt=""></a></button>
   </header>
 
     <aside class="sidebar">
-      <button class="icon-button icon-inicio"><img src="../src/img/Inicio.svg" alt="Inicio" /></button>
-      <button class="icon-button icon-game"><img src="../src/img/Game.svg" alt=""></button>
-      <button class="icon-button icon-media"><img src="../src/img/MultMedia.svg" alt=""></button>
+      <button class="icon-button icon-inicio">
+        <a class="button-a" href="../../index.html">
+          <img src="../../src/img/Inicio.svg" alt="Inicio" />
+        </a>
+      </button>
+      <button class="icon-button icon-game">
+        <a class="button-a" href="../game/games.html">
+          <img src="../../src/img/Game.svg" alt="">
+        </a></button>
+      <button class="icon-button icon-media">
+        <a class="button-a" href="../video/videos.html">
+          <img src="../../src/img/MultMedia.svg" alt="">
+        </a></button>
     </aside>
 
   <main class="main-content reproductor-audio">
@@ -36,10 +46,10 @@
         <div class="progress" id="progreso"></div>
       </div>
 
-      <div class="action-buttons">
-        <button>Ver</button>
-        <button>Leer</button>
-        <button>Escuchar</button>
+      <div class="actions">
+        <button class="action-btn"><img src="../../src/img/View.svg" alt="" class="action"><span>Ver</span></button>
+        <button class="action-btn"><img src="../../src/img/Read.svg" alt="" class="action"><span>Leer</span></button>
+        <button class="action-btn"><img src="../../src/img/Escuchar.svg" alt="" class="action"><span>Escuchar</span></button>
       </div>
     </div>
   </main>
