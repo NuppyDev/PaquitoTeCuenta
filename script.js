@@ -51,3 +51,19 @@ let escuchar = document.getElementsByClassName('btn_audio');
 ver.addEventListener('click', () => {
     
 });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Evita el envío por defecto
+
+      const usuario = document.getElementById("usuario-input").value;
+      const contraseña = document.getElementById("contraseña-input").value;
+      localStorage.setItem("usuario", usuario);
+
+      window.location.href = "/html/perfil.html";
+    });
+  });
