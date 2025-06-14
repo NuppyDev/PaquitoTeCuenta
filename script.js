@@ -1,19 +1,22 @@
 //audio player with play/pause, progress bar, and skip buttons
 const audio = document.getElementById('audio');
-const playPauseBtn = document.getElementById('playPause');
+let plays = document.getElementById('play');
+const icon = document.getElementById('plays');
+let retroc = document.getElementById('retroceder');
+let avanz = document.getElementById('avanzar');
 const progreso = document.getElementById('progreso');
 const barra = document.getElementById('barra');
-const avanzar = document.getElementById('avanzar');
-const retroceder = document.getElementById('retroceder');
 
 // Cambia icono al reproducir/pausar
-playPauseBtn.addEventListener('click', () => {
+plays.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        playPauseBtn.textContent = '⏸️';
+        icon.src = "/src/img/Pause.svg";
+        plays.removeAttribute("id");
     } else {
         audio.pause();
-        playPauseBtn.textContent = '▶️';
+        icon.src = "/src/img/Play.svg";
+        plays.setAttribute("id", "play");
     }
 });
 

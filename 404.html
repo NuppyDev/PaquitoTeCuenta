@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(180deg, #FFA76C, #FF7043);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 8rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px #d95428;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-home {
+      background-color: #fff;
+      color: #FF5722;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-home:hover {
+      background-color: #ffe2d3;
+      transform: scale(1.05);
+    }
+
+    .illustration {
+      width: 200px;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 5rem;
+      }
+      .illustration {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="/src/img/Paquito4.svg" alt="Paquito confundido" class="illustration">
+  <h1>404</h1>
+  <h2>¡Uy! Algo salió mal</h2>
+  <p>La página que buscas no existe o fue movida.</p>
+  <a href="index.html" class="btn-home">Volver al inicio</a>
+</body>
+</html>

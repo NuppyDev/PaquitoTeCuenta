@@ -178,11 +178,14 @@ a {
   padding: 10px 15px;
   border-radius: 100%;
   font-size: 20px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   box-shadow: 1px 2px 0px #008dd3;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
 }
 
 .control-btn img {
@@ -337,15 +340,14 @@ video {
 .media-frame {
   width: 500px;
   height: 300px;
-  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
-    linear-gradient(-45deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(-45deg, transparent 75%, #ccc 75%);
-  background-size: 40px 40px;
-  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
-  background-color: white;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .arrow-left,
@@ -812,8 +814,23 @@ footer p {
 
 /******************************/
 /*Video Page*/
-    .body-videoPage {
+    .body-videoPage{
       background: #ff827e;
+    }
+
+    .body-audioPage{
+      background-color: #37C8AB;
+    }
+
+    .titleGame, .titleVideo{
+      background-color: unset;
+    }
+
+    .title-game-letter{
+      background-color: #67ceb9;
+      box-shadow: 0px 3px #1dad8b;
+      color: white;
+      transform: translateY(-40px);
     }
 
     .section-top {
@@ -830,7 +847,7 @@ footer p {
       z-index: 2;
     }
 
-    .video-box {
+    .video-box, .audio-box{
       border: 5px solid #00c3ff;
       background-image: url('/src/img/Portada.png');
       background-size: cover;
@@ -865,13 +882,13 @@ footer p {
       box-shadow: 0px 3px #d48d8d;
     }
 
-    .videos-list{
+    .videos-list, .audios-list{
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .section-videos {
+    .section-videos, .section-audios{
       margin-bottom: 80px;
       padding: 20px;
     }
@@ -880,10 +897,9 @@ footer p {
       color: white;
       font-size: 20px;
       padding: 20px 20px 10px;
-      text-shadow: 2px 2px #ff8c8c;
     }
 
-    .videos {
+    .videos, .audios{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -892,14 +908,14 @@ footer p {
       padding: 20px 100px;
     }
 
-    .video-thumb {
+    .video-thumb, .audio-thumb{
       background: white;
       width: 250px;
       height: 140px;
       border-radius: 10px;
     }
 
-    .video-thumb img {
+    .video-thumb img, .audio-thumb img{
       width: 100%;
       height: 100%;
       border-radius: 10px;
@@ -918,3 +934,167 @@ footer p {
       font-weight: bold;
       margin: 10px;
     }
+
+/**************************************/
+/*Form*/
+       .body-form {
+            background: linear-gradient(135deg, #a9d6a9, #f4c430, #ff8c42);
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+.card {
+  --p: 32px;
+  --h-form: auto;
+  --w-form: 380px;
+  --input-px: 0.75rem;
+  --input-py: 0.65rem;
+  --submit-h: 38px;
+  --blind-w: 64px;
+  --space-y: 0.5rem;
+  width: var(--w-form);
+  height: var(--h-form);
+  max-width: 100%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.259);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: var(--p);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.form {
+  order: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form .title {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-top: 0;
+  padding-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.form img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: var(--space-y);
+}
+
+.form .label_input {
+  white-space: nowrap;
+  font-size: 1rem;
+  margin-top: calc(var(--space-y) / 2);
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+  display: inline;
+  text-align: left;
+  margin-right: auto;
+  position: relative;
+  z-index: 99;  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.form .input, .form  .input {
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.259);
+  border: 1px solid #8f8f8f;
+  border-radius: 6px;
+  outline: none;
+  padding: var(--input-py) var(--input-px);
+  font-size: 18px;
+  width: 100%;
+  color: #000000b3;
+  margin: var(--space-y) 0;
+  transition: all 0.25s ease;
+}
+.form .input:focus {
+  border: 1px solid #0969da;
+  outline: 0;
+  box-shadow: 0 0 0 2px #0969da;
+}
+.form .frg_pss {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+.form .frg_pss a {
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.25s ease;
+  color: #000000b3;
+  font-weight: 500;
+  float: right;
+}
+.form .frg_pss a:hover {
+  color: #000;
+}
+
+.form .submit {
+  height: var(--submit-h);
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  background-color: #ff8c42;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(17, 17, 17, 0.04) 100%
+  );
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  -webkit-appearance: button;
+  appearance: button;
+  margin: var(--space-y) 0 0;
+}
+.form .submit:hover {
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(17, 17, 17, 0.08) 100%
+  );
+  border: none;
+  color: #111;
+}
+
+.blind-check:checked ~ .form .input[type="text"] {
+  /* text-emphasis: circle; */
+  -webkit-text-security: disc;
+}
