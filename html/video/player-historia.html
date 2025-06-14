@@ -7,98 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="shortcut icon" href="../../Icono.svg" type="image/x-icon" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #bb73f1;
-    }
-
-    .container {
-      display: flex;
-      height: calc(100vh - 60px);
-    }
-
-    .main-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-
-    .main-content h1 {
-      font-size: 24px;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    }
-
-    .history {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 75px;
-      width: 100%;
-      height: 300px;
-      margin-bottom: 20px;
-    }
-
-    .media-frame {
-      width: 500px;
-      height: 300px;
-      background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
-                        linear-gradient(-45deg, #ccc 25%, transparent 25%),
-                        linear-gradient(45deg, transparent 75%, #ccc 75%),
-                        linear-gradient(-45deg, transparent 75%, #ccc 75%);
-      background-size: 40px 40px;
-      background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
-      background-color: white;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .arrow-left, .arrow-right {
-      background-color: #00CF7F;
-      color: white;
-      border-radius: 8px;
-      width: 50px;
-      height: 50px;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 1.5px 3px 0px #B0F0D7;
-      cursor: pointer;
-    }
-
-    .arrow{
-      width: 25px;
-      height: 25px;
-    }
-
-    .description {
-      max-width: 600px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-    .arrow-left:hover, .arrow-right:hover {
-      background-color: #1aa06d;
-      box-shadow: 0px 0px 0px #B0F0D7;
-    }
-  </style>
 </head>
-<body>
+<body class="body">
 
   <header class="header">
-      <button class="parent-control"><a class="button-a" href="../controlParent.html">Control Parental</a></button>
-      <button class="profile-btn"><a class="button-a" href="../perfil.html"><img src="../../src/img/Perfil.svg" alt=""></a></button>
+      <button class="parent-control"><a class="button-a" href="/html/controlParent.html">Control Parental</a></button>
+      <button class="loguito"><a href="/index.html" class="logo-inicio"><img src="/src/img/Logo.svg" alt=""></a></button>
+      <button class="profile-btn"><a class="button-a" href="/html/perfil.html"><img src="/src/img/Perfil.svg" alt=""></a></button>
   </header>
 
   <div class="container">
@@ -128,9 +43,9 @@
       <p class="description">Lorem ipsum dolor sit amet consectetur. Commodo venenatis lobortis at ut dolor ultrices aliquam in. In blandit placerat ac facilisis et.</p>
         
       <div class="actions">
-        <button class="action-btn"><img src="../../src/img/View.svg" alt="" class="action"><span>Ver</span></button>
-        <button class="action-btn"><img src="../../src/img/Read.svg" alt="" class="action"><span>Leer</span></button>
-        <button class="action-btn"><img src="../../src/img/Escuchar.svg" alt="" class="action"><span>Escuchar</span></button>
+        <button class="action-btn"><a href="../video/player-video.html"><img src="../../src/img/View.svg" alt="" class="action">Ver</a></button>
+        <button class="action-btn"><a href="#"><img src="../../src/img/Read.svg" alt="" class="action">Leer</a></button>
+        <button class="action-btn"><a href="../video/player-audio.html"><img src="../../src/img/Escuchar.svg" alt="" class="action">Escuchar</a></button>
       </div>
     </main>
   </div>

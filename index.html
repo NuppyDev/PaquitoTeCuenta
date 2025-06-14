@@ -10,36 +10,42 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+
+    </style>
   </head>
-  <body>
-    <header>
-      <button class="parent-control"><a class="button-a" href="#">Control Parental</a></button>
-      <button class="profile-btn"><a class="button-a" href="perfil.html"><img src="../../src/img/Perfil.svg" alt=""></a></button>
-    </header>
+  <body class="body-index">
+  <header class="header">
+      <button class="parent-control"><a class="button-a" href="/html/controlParent.html">Control Parental</a></button>
+      <button class="loguito"><a href="/index.html" class="logo-inicio"><img src="/src/img/Logo.svg" alt=""></a></button>
+      <button class="profile-btn"><a class="button-a" href="/html/perfil.html"><img src="/src/img/Perfil.svg" alt=""></a></button>
+  </header>
     <!-- Separador -->
     <main>
       <section class="heading">
-        <h1 class="heading_titulo">Paquito te cuenta</h1>
-        <p class="heading_descipcion">
-          Un lugar para que los más pequeños aprendan y se diviertan
-        </p>
         <!-- Separador -->
         <div class="container_heading">
           <div class="heading_paquito">
             <img src="./src/img/Mango.svg" alt="Mango Decorativo" class="deco_mango" />
             <div class="resume">
-              <div class="resume">
+              <div class="resumen">
                 <img
                   src="./src/img/Mango.svg"
                   alt="Mangos Conseguidos"
                   class="resume_img"
                 />
                 <div class="resume_info">
-                  <p class="info_count">10000 mangos</p>
+                  <p class="info_count">100 mangos</p>
                   <p class="info_text">Manguitos conseguidos</p>
                 </div>
               </div>
-              <div class="resume">
+              <div class="resumen">
                 <img
                   src="./src/img/Corazon.svg"
                   alt="Promedio de Corazones"
@@ -49,6 +55,11 @@
                   <p class="info_count">3.5 / 5</p>
                   <p class="info_text">Promedio de corazones</p>
                 </div>
+              </div>
+              <div class="info">
+                <p>En Masaya, confundieron a Paquito con un mango en el parque y... ¡Casi se lo comen!</p>
+                <br>
+                <p>Bueno, eso fue lo que Paquito me contó</p>
               </div>
             </div>
             <img
@@ -79,30 +90,47 @@
           <!-- Separador -->
           <div class="heading_others">
             <div class="video_new">
-              <video src="./src/video/"></video>
+              <a href="/html/video/player-video.html"><img src="/src/img/Portada.png" alt=""></a>
             </div>
-            <div class="buttons_nav">
-              <button class="btn btn_videos">Videos</button>
-              <button class="btn btn_juegos">Juegos</button>
+            <div class="buttons_navs">
+              <button class="icon-button icon-games game-index">
+                <a class="button-a" href="/html/game/games.html">
+                  <img src="../../src/img/Game.svg" alt="">
+                </a>
+              </button>
+              <button class="icon-button icon-media media-index">
+                <a class="button-a" href="/html/video/videos.html">
+                  <img src="../../src/img/MultMedia.svg" alt="">
+                </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
       <!-- Separador -->
-      <section class="newsMedia">
+      <div class="titleMedia">
         <h2 class="newsMedia_title">¡Recién saliditos del nido!</h2>
+      </div>
+      <section class="newsMedia">
         <div class="newsMedia_videos">
           <div class="newsMedia_list">
-            <div class="video_item"></div>
+            <div class="video_item"><img src="/src/img/Portada.png" alt=""></div>
+            <div class="video_item"><img src="/src/img/Portada.png" alt=""></div>
+            <div class="video_item"><img src="/src/img/Portada.png" alt=""></div>
+            <div class="video_item"><img src="/src/img/Portada.png" alt=""></div>
           </div>
-          <button class="btn btn-rect btn_newsVideo">Ver más <span><img src="./src/img/arrow-circle-right.svg" alt="Icon ver más"></span></button>
+          <div class="btn btn-rect btn_newsJuegos"><a href="/html/video/videos.html">Ver más <span><img src="./src/img/arrow-circle-right.svg" alt="Icon ver más"></span></a></div>
+          </button>
         </div>
         <!-- Separador -->
         <div class="newsMedia_juegos">
           <div class="newsMedia_list">
-            <div class="juego_item"></div>
+            <div class="juego_item"><img src="/src/img/Portada1.png" alt=""></div>
+            <div class="juego_item"><img src="/src/img/Portada1.png" alt=""></div>
+            <div class="juego_item"><img src="/src/img/Portada1.png" alt=""></div>
+            <div class="juego_item"><img src="/src/img/Portada1.png" alt=""></div>
           </div>
-          <button class="btn btn-rect btn_newsJuegos">Ver más <span><img src="./src/img/arrow-circle-right.svg" alt="Icon ver más"></span></button>
+          <div class="btn btn-rect btn_newsJuegos"><a href="/html/game/games.html">Ver más <span><img src="./src/img/arrow-circle-right.svg" alt="Icon ver más"></span></a></div>
         </div>
       </section>
     </main>
@@ -111,32 +139,6 @@
       <small
         >&copy; 2025 Paquito te Cuenta · Todos los derechos reservados</small
       >
-      <div class="footer-social-icons">
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-        >
-          <i class="fab fa-facebook-f" style="font-size: 24px"></i>
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-        >
-          <i class="fab fa-instagram" style="font-size: 24px"></i>
-        </a>
-        <a
-          href="https://youtube.com"
-          target="_blank"
-          rel="noopener"
-          aria-label="YouTube"
-        >
-          <i class="fab fa-youtube" style="font-size: 24px"></i>
-        </a>
-      </div>
     </footer>
   </body>
 </html>

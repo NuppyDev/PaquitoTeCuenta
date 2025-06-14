@@ -1,8 +1,9 @@
 // Video player with play/pause, progress bar, and skip buttons
 let video = document.getElementById('video');
 let plays = document.getElementById('play');
-let retroc = document.getElementById('retro');
-let avanz = document.getElementById('avan');
+const icon = document.getElementById('plays');
+let retroc = document.getElementById('retroceder');
+let avanz = document.getElementById('avanzar');
 let fullscreen = document.getElementById('full');
 let progress = document.getElementById('progreso');
 let tiempoActual = document.getElementById('tiempoActual');
@@ -11,10 +12,12 @@ let duracionTotal = document.getElementById('duracionTotal');
 plays.addEventListener('click', () => {
     if (video.paused) {
         video.play();
-        plays.textContent = '⏸️';
+        icon.src = "/src/img/Pause.svg";
+        plays.removeAttribute("id");
     } else {
         video.pause();
-        plays.textContent = '▶️';
+        icon.src = "/src/img/Play.svg";
+        plays.setAttribute("id", "play");
     }
 });
 

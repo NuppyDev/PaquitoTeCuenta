@@ -9,8 +9,9 @@
 </head>
 <body>
   <header class="header">
-      <button class="parent-control"><a class="button-a" href="../../html/controlParent.html">Control Parental</a></button>
-      <button class="profile-btn"><a class="button-a" href="../perfil.html"><img src="../../src/img/Perfil.svg" alt=""></a></button>
+      <button class="parent-control"><a class="button-a" href="/html/controlParent.html">Control Parental</a></button>
+      <button class="loguito"><a href="/index.html" class="logo-inicio"><img src="/src/img/Logo.svg" alt=""></a></button>
+      <button class="profile-btn"><a class="button-a" href="/html/perfil.html"><img src="/src/img/Perfil.svg" alt=""></a></button>
   </header>
 
     <aside class="sidebar">
@@ -32,14 +33,14 @@
   <main class="main-content reproductor-audio">
     <div class="media-box">
       <div class="image-placeholder"></div>
-      <h2 class="titulo">Título del Audio</h2>
+      <h2 class="titulo">Los Cadejos</h2>
 
-      <audio id="audio" src="../src/audio/Los Cadejos.mp3"></audio>
+      <audio id="audio" src="../../src/audio/Los Cadejos.mp3"></audio>
 
       <div class="controls audio-controls">
-        <button id="retroceder" class="control-btn">⏪</button>
-        <button id="playPause" class="control-btn">▶️</button>
-        <button id="avanzar" class="control-btn">⏩</button>
+        <button id="retroceder" class="control-btn"><img src="../../src/img/Atras.svg" alt=""></button>
+        <button id="playPause" class="control-btn pause"><img src="../../src/img/Play.svg" alt=""></button>
+        <button id="avanzar" class="control-btn"><img src="../../src/img/Adelantar.svg" alt=""></button>
       </div>
 
       <div class="progress-bar" id="barra">
@@ -47,13 +48,13 @@
       </div>
 
       <div class="actions">
-        <button class="action-btn"><img src="../../src/img/View.svg" alt="" class="action"><span>Ver</span></button>
-        <button class="action-btn"><img src="../../src/img/Read.svg" alt="" class="action"><span>Leer</span></button>
-        <button class="action-btn"><img src="../../src/img/Escuchar.svg" alt="" class="action"><span>Escuchar</span></button>
+        <button class="action-btn"><a href="../video/player-video.html"><img src="../../src/img/View.svg" alt="" class="action">Ver</a></button>
+        <button class="action-btn"><a href="../video/player-historia.html"><img src="../../src/img/Read.svg" alt="" class="action">Leer</a></button>
+        <button class="action-btn"><a href="#"><img src="../../src/img/Escuchar.svg" alt="" class="action">Escuchar</a></button>
       </div>
     </div>
   </main>
 
-  <script src="../script.js"></script>
+  <script src="../../script.js"></script>
 </body>
 </html>
